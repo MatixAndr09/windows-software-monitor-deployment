@@ -1,8 +1,9 @@
 # Windows Software Monitor Deployment
 
 > [!WARNING]
-> **Ostrzeżenie:** Ten projekt jest remakem oprogramowania, które może być uznane za spyware. Używasz go na własne ryzyko. Autor nie ponosi odpowiedzialności za jakiekolwiek szkody.
-
+> **Ostrzeżenie:** Ten projekt jest remakem oprogramowania, które było i jest uznawane jako `spyware`, `stealer`, `trojan`. To oprogramowanie użwya takich technik jak `Privilege Escalation`, `Evasion`, `Discovery`. Używasz go na własne ryzyko. Autor nie ponosi odpowiedzialności za jakiekolwiek szkody.
+> **Oficjalne repo:** [Link](https://github.com/Techni-Schools/windows-software-monitor-deployment/tree/waw-2024-2029)
+> **Analiza plików .exe:** [Link](https://tria.ge/241217-1yccnazkcw)
 
 ## Skrypty
 
