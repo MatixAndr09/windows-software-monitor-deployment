@@ -1,6 +1,0 @@
-unity
-intellijidea-ultimate
-pycharm
-phpstorm
-webstorm
-nmap
