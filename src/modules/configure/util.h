@@ -5,4 +5,9 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#endif //UTIL_H
+void checkAndInstallChocolatey();
+void configureDocker();
+void installNmap();
+void configureXampp();
+
+#endif // UTIL_H

